@@ -18,7 +18,7 @@ int maxArea(vector<int>& arr) {
         int width = right - left;
         int currentWater = height * width;
         maxWater = max(maxWater, currentWater);
-        if (arr[left] < arr[right]) left++;
+        if (arr[left] < arr[right]) left++;//It is searching for more height to maximize the area
         else right--;
     }
     return maxWater;

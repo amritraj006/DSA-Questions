@@ -1,5 +1,8 @@
-ap
+# C++ build artifacts
 *.out
 *.exe
 *.o
+
+# macOS system files
+.DS_Store
 
