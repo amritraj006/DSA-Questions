@@ -4,16 +4,15 @@
 #include <algorithm>
 using namespace std;
 
+//Kadane's Algorithm O(n) -> Time Complexity, o(1) -> Space Complexity
+
 int maximumSubArraySum(vector<int>& arr) {
-    int maxSum = INT_MIN;
     int currSum = 0;
+    int maxSum = INT_MIN;
     for (int i : arr) {
         currSum+=i;
         maxSum = max(currSum, maxSum);
-
-        if (currSum < 0) {
-            currSum = 0;
-        }
+        if (currSum < 0) currSum = 0;
     }
     return maxSum;
 }

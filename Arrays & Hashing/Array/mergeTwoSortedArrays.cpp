@@ -27,6 +27,8 @@ void mergeTwoSortedArrays(vector<int>& arr1, int n, vector<int>& arr2, int m) {
     }
 }
 
+
+
 int main() {
     vector<int> arr1 = {1,3,4};
     vector<int> arr2 = {2,3,6};
