@@ -1,8 +1,5 @@
-# C++ build artifacts
+# ignore executables
+a.out
 *.out
 *.exe
 *.o
-
-# macOS system files
-.DS_Store
-
