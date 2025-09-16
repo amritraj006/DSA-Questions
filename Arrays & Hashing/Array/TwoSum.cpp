@@ -1,25 +1,23 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 //Two Sum
-vector<int> twoSum(vector<int>& nums, int target) {
-    int left = 0;
-    int right = nums.size() - 1;
-    
-    while (left < right) {
-        int sum = nums[left] + nums[right];
-        if (sum == target) {
-            return {left, right};
-        } else if (sum < target) {
-            left++;
-        } else {
-            right--;
+
+vector<int> twoSum(vector<int>& arr, int target) {
+    unordered_map<int, int> mp; // value -> index
+    for (int i = 0; i < arr.size(); i++) {
+        int complement = target - arr[i];
+        if (mp.find(complement) != mp.end() && !mp.empty()) {
+            return {mp[complement], i};
         }
+        mp[arr[i]] = i;
     }
     return {};
 }
+
 
 int main() {
     vector<int> arr = {2,3,1,5,6};
