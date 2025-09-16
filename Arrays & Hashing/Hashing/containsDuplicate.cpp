@@ -6,10 +6,23 @@ using namespace std;
 bool ContainsDuplicate(vector<int>& arr) {
     unordered_set<int> seen;
     for (int i : arr) {
-        if (seen.count(i)) {
+        if (seen.count(i)) return true;
+        seen.insert(i);
+    }
+    return false;
+}
+
+//Two Pointer
+bool ContainsDuplicate2(vector<int>& arr) {
+    sort(arr.begin(), arr.end());
+    int left = 0;
+    int right = 1;
+    while (right < arr.size()) {
+        if (arr[left] == arr[right]) {
             return true;
         }
-        seen.insert(i);
+        left++;
+        right++;
     }
     return false;
 }
