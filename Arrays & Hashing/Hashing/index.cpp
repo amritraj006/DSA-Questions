@@ -30,7 +30,6 @@ bool isContainsDuplicate2(vector<int>& nums) {
 }
 
 
-
 int main() {
     unordered_map<int, int> hashMap;
     hashMap.insert({4, 100});
