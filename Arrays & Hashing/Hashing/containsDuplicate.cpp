@@ -50,6 +50,8 @@ bool isSortedArray2(vector<int>& arr) {
     return true;
 }
 
+
+
 int main() {
     vector<int> arr = {2,3,5,4,54,4};
     if (ContainsDuplicate(arr)) {
